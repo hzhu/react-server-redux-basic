@@ -3,20 +3,10 @@ import { RootElement, logging } from 'react-server'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
-import Counter from '../components/Counter';
+import Counter from '../../components/Counter';
+import reducer from './reducer'
 
-function counter(state = 0, action) {
-  switch (action.type) {
-    case 'INCREMENT':
-      return state + 1
-    case 'DECREMENT':
-      return state - 1
-    default:
-      return state
-  }
-}
-
-const store = createStore(counter)
+const store = createStore(reducer)
 
 export default class SimplePage {
 	getElements() {
