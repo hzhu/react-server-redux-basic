@@ -3,7 +3,6 @@ import { RootElement, logging } from 'react-server'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
-import HelloWorld from '../components/hello-world';
 import Counter from '../components/Counter';
 
 function counter(state = 0, action) {
@@ -23,9 +22,6 @@ export default class SimplePage {
 	getElements() {
 		return [
       <RootElement key={0}>
-        <HelloWorld/>
-      </RootElement>,
-      <RootElement key={1}>
         <Provider store={store}>
 			    <Counter
 			      value={store.getState()}
