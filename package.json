@@ -6,7 +6,8 @@
   "scripts": {
     "start": "react-server start --hot=true",
     "lint": "eslint routes.js test.js pages",
-    "test": "npm run lint && nsp check && ava test.js"
+    "test": "npm run lint && nsp check && ava test.js",
+    "clean": "rm -rf __clientTemp"
   },
   "license": "Apache-2.0",
   "dependencies": {
